@@ -1,0 +1,43 @@
+Escreva um procedimento para a realização de uma divisão. Para simplificar, considere apenas a divisão de um número inteiro por outro, de forma que o resultado também deva ser um número inteiro.
+
+pergunte qual o numero a ser dividido
+leia(X)
+pergunte qual o numero que ira dividir o numero antesrior
+leia(Y)
+se tiver letras ou virgulas em X e em Y faça
+    escreva("Não é possível digitar letras e nem virgulas, substitua letras por numeros e virgula por ponto!!")
+fim_se
+
+resultado <- 0  // resultado da divisao (numero de somas repetido)
+numeroDeMultiplicações <- 0 // numeros apos a virgula
+conta <- falso
+
+enquanto conta for falso faça
+    enquanto o resto for menor que 0 faça
+        subtraia o valor de que ira dividir(Y) pelo que ser dividido(X)
+
+        se repetir for maior que 20 faça // 'numero de digitos maximo'
+            resto <- 0
+        fim_se
+
+        se o resto da subtração for menor que 0 faça
+            some o valor que ira dividir(Y) com ele mesmo
+            some mais 1 ao resultado
+            repetir <- repetir + 1
+            continue
+        senao
+            subtraia o valor das somas de Y por ele mesmo 1 vez (1*Y)
+            subtraia o valor do resultado em 1
+            multiplique o valor a ser dividido por 10
+            repetiir <- repetir + 1
+            numeroDeMultiplicações <- numero de vezes que a linha 28 ocorreu
+            continue
+        fim_se
+    fim_enquanto
+
+    resultado vai ser igual a resultado dividido pelo (numeroDeMultiplicações multiplicado por 10)
+    (resultado = resultado / (numeroDeMultiplicações*10))
+    escreva(resultado)
+    conta <- verdade
+fim_enquanto
+

@@ -1,0 +1,90 @@
+Menu de opções: 1 – Imposto, 2 – Novo Salário, 3 – Classificação, 4 – Finalizar o programa, 5 – Finalizar o programa. Digite a opção desejada. 
+
+Na opção 1: receber o salário de um funcionário, calcular e mostrar o valor do imposto usando as regras da tabela 3. 
+
+Na opção 2: receber o salário de um funcionário, calcular e mostrar o valor do novo salário usando as regras da tabela 4. 
+
+Na opção 3: receber o salário de um funcionário e mostrar sua classificação usando a tabela 5.
+
+
+INICIO
+
+escreva("1 – Imposto. \n 2 – Novo Salário. \n 3 – Classificação. \n 4 – Finalizar o programa.")
+escreva("Digite a opção desejada: ")
+leia(opcao)
+
+sair == "N"
+
+repita
+    escolha opcao
+    caso 1
+        escreva("Digite o nome ou código do funcionário: ")
+        leia(nomeFuncionario)
+        
+        escreva("Digite o salário do funcionário: ")
+        leia(salarioInicial)
+
+        se (salarioInicial < 500) entao
+            imposto = salarioInicial * 0.05
+        senao
+            se (salarioInicial >= 500 E salarioInicial <= 850) entao
+                imposto = salarioInicial * 0.1
+            senao
+                imposto = salarioInicial * 0.15
+            fim_se
+        fim_se
+        escreva("O imposto será no valor de R$ ", imposto)
+        pare
+
+    caso 2 
+        escreva("Digite o nome ou código do funcionário: ")
+        leia(nomeFuncionario)
+        
+        escreva("Digite o salário do funcionário: ")
+        leia(salarioInicial)
+
+        se (salarioInicial > 1500) entao
+            aumento = 250
+            salarioFinal = salarioInicial + aumento
+        senao
+            se (salarioInicial >= 750 E salarioFinal <= 1500) entao
+                aumento = 50
+                salarioFinal = salarioInicial + aumento
+            senao
+                se (salarioInicial >= 450 E salarioInicial < 750 ) entao
+                    aumento = 75
+                    salarioFinal = salarioInicial + aumento
+                senao
+                    aumento = 100
+                    salarioFinal = salarioInicial + aumento
+                fim_se
+            fim_se
+        fim_se
+        escreva("Funcionário: ", nome);
+        escreva("Salário inicial: R$ ", salarioInicial);
+        escreva("Aumento sobre salário: R$ ", aumento);
+        escreva("Salário com aumento: RS", salarioFinal);
+        pare
+
+    caso 3
+        escreva("Digite o salário do funcionário: ")
+        leia(salarioInicial)
+
+        se (salarioInicial <= 700) entao
+            escreva("Mal-renumerado");
+        senao
+            escreva("Bem-renumerado");
+        fim_se
+        pare
+        
+    caso 4
+        escreva("Deseja realmente sair do programa? [S/N]")
+        leia(sair)
+        escreva("Fim do programa")
+        pare
+    default
+        escreva("A opção digitada é invalida. Digite um dos valores entra 1 a 4.)
+    fim_escolha
+ate(sair == "S")
+
+FIM

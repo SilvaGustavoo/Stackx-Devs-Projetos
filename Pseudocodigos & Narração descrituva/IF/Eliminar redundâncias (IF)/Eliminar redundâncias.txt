@@ -1,0 +1,40 @@
+Elimine os testes reduntantes do trecho de código abaixo: 
+Exemplo 1:
+
+INICIO
+
+real a;
+real b; 
+
+escreva("Digite um valor: ");
+escreva("Digite outro valor: ");
+leia(a);
+leia(b);
+
+se (a>b) entao
+    escreva("o maior é ", a);
+senao
+    escreva("o maior é ", b);
+fim_se
+
+FIM
+
+Exemplo 2:
+
+INICIO
+inteiro x;
+
+escreva("Digite um número: ");
+leia(x);
+
+se (x>10) entao
+    escreva("O valoré maior que 10.");
+senao
+    se (X<=10 && X>5) entao
+        escreva("O valor é menor igual a 10 e maior que cinco.");
+    senao
+        escreva("O valor é menor igual que 5.");
+    fim_se
+fim_se
+
+FIM

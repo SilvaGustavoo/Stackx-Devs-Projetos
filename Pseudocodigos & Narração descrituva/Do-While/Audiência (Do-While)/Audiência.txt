@@ -1,0 +1,81 @@
+Foi feita uma pesquisa sobre a audiência de canal de TV em várias casas de uma cidade, em determinado dia. Para cada casa consultada foi fornecido o número do canal (4, 5, 7, 12) e o número de pessoas que estavam assistindo àquele canal. Se a televisão estivesse desligada, nada era anotado, ou seja, essa casa não entrava na pesquisa.
+
+Faça um programa que:
+
+a) Leia um número indeterminado de dados (número do canal e número de pessoas que estavam assistindo);
+
+b) Calcule e mostre a porcentagem de audiência de cada canal.
+
+Para encerrar a entrada de dados, digite o número do canal zero.
+
+INICIO
+
+INTEIRO: numCanal, numPessoas, casasCanal12, casasCanal4, casasCanal5, casasCanal7, assCanal12, assCanal4, assCanal5, assCanal7;
+REAL: audiencia12, audiencia4, audiencia5, audiencia7;
+
+escreva("Este programa irá auxilia-lo em sua pesquisa. Digite o numero do canal que a familia estja vendo na TV e o numero de telespectadores, e será arma. Para fechar encerrar a pesquisa e obter a descrição dos dados pressione canal 0. Boa pesquisa!!"
+
+repita
+    escreva("Digite o número do canal: ")
+    Leia(numCanal)
+    escreva("Digite o número de pessoas que estavam assistindo: ")
+    leia(numPessoas)
+
+    totalPessoas = totalPessoas + numPessoas
+    escolha numCanal
+        caso 4
+            casasCanal4 = casasCanal4 + 1
+            assCanal4 = assCanal4 + numPessoas
+            pare
+        caso 5
+            casasCanal5 = casasCanal5 + 1
+            assCanal5 = assCanal5 + numPessoas
+            pare
+        caso 7
+            casasCanal7 = casasCanal7 + 1
+            assCanal7 = assCanal7 + numPessoas
+            pare
+        caso 12
+            casasCanal12 = casasCanal12 + 1
+            assCanal12 = assCanal12 + numPessoas
+            pare
+        default
+            escreva("Os canais que participam da pesquisa são somente 4, 5, 7 e 12. Digite um desses ou 0 para sair do programa")
+            pare
+    fim_escolha
+ate(numCanal == 0)
+
+totalCasas = (casasCanal12 + casasCanal4 + casasCanal5 + casasCanal7)
+audiencia4 = (assCanal4/totalPessoas)*100
+audiencia5 = (assCanal5/totalPessoas)*100
+audiencia7 = (assCanal7/totalPessoas)*100
+audiencia12 = (assCanal12/totalPessoas)*100
+
+escreva("Canal 4")
+escreva("Número de casas: ", casasCanal4)
+escreva("Número de pessoas assistindo: ", assCanal4)
+escreva("Porcentagem de audiencia: ", audiencia4, "%")
+escreva(" ")
+
+escreva("Canal 5")
+escreva("Número de casas: ", casasCanal5)
+escreva("Número de pessoas assistindo: ", assCanal5)
+escreva("Porcentagem de audiencia: ", audiencia5, "%")
+escreva(" ")
+
+escreva("Canal 7")
+escreva("Número de casas: ", casasCanal7)
+escreva("Número de pessoas assistindo: ", assCanal7)
+escreva("Porcentagem de audiencia: ", audiencia7, "%")
+escreva(" ")
+
+escreva("Canal 12")
+escreva("Número de casas: ", casasCanal12)
+escreva("Número de pessoas assistindo: ", assCanal12)
+escreva("Porcentagem de audiencia: ", audiencia12, "%")
+escreva(" ")
+
+escreva("Total de pessoas: ", totalPessoas)
+escreva("Total de casas: ", totalCasas)
+
+FIM

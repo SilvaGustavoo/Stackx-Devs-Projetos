@@ -1,0 +1,40 @@
+Criar um programa que a partir da idade e peso do paciente calcule a dosagem de determinado medicamento e imprima a receita informando quantas gotas do medicamento o paciente deve tomar por dose. Considere que o medicamento em questão possui 500 mg por ml, e que cada ml corresponde a 20 gotas.
+Adultos ou adolescentes desde 12 anos, inclusive, se tiverem peso igual ou acima de 60 Kg devem tomar 1000 mg; com peso abaixo de 60 Kg devem tomar 875 mg.
+Para crianças e adolescentes abaixo de 12 anos a dosagem é calculada pelo peso corpóreo conforme a tabela a seguir:
+
+
+INICIO
+
+escreva("Qual a idade do paciente: ")
+leia(idade)
+escreva("Qual o peso do paciente: ")
+leia(peso)
+
+se (idade => 12 && peso >= 60) entao
+    escreva("O paciente deve tomar 2 ml(40 gotas) equivalente a uma dosagem de 1000 mg")
+senao
+    se (idade >= 12 && peso < 60)
+        escreva("O paciente deve tomar 1,75 ml(35 gotas) equivalente a uma dosagem de 875 mg")
+    senao
+        se (idade < 12 && peso >= 5 && peso <= 9)
+            escreva("O paciente deve tomar 0,25 ml(5 gotas) equivalente a uma dosagem de 125 mg")
+        senao
+            se (idade < 12 && peso > 9 && peso <= 16)
+                escreva("O paciente deve tomar 0,5 ml(10 gotas) equivalente a uma dosagem de 250 mg")
+            senao
+                se (idade < 12 && peso > 16 && peso <= 24)
+                    escreva("O paciente deve tomar 0,75 ml(15 gotas) equivalente a uma dosagem de 375 mg")
+                senao
+                    se (idade < 12 && peso > 24 && peso <= 30)
+                        escreva("O paciente deve tomar 1 ml(20 gotas) equivalente a uma dosagem de 500 mg")
+                    senao
+                        se (idade < 12 && peso >= 5 && peso <= 9)
+                            escreva("O paciente deve tomar 1,5 ml(30 gotas) equivalente a uma dosagem de 750 mg")
+                        fim_se
+                    fim_se
+                fim_se
+            fim_se
+        fim_se
+    fim_se
+fim_se
+FIM

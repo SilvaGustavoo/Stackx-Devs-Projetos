@@ -1,0 +1,34 @@
+Desenvolva um programa que dado um número, informe se ele é divisível por 3 e por 7.
+
+
+INICIO
+
+real multiploDe3;
+real multiploDe7;
+
+inteiro numero;
+inteiro restoDe3;
+inteiro restoDe7;
+
+escreva("Digite um número inteiro: ")
+leia(numero)
+restoDe3 <- numero % 3
+restoDe7 <- numero % 7
+multiploDe3 <- numero / 3
+multiploDe7 <- numero / 7
+
+se restoDe3 == 0 && restoDe7 == 0 entao
+    escreva("É um multiplo de 3 e de 7!! e o valor dividido por 3 é ", multiploDe3, " e por 7 é ", multiploDe7);
+senao
+    se restoDe3 == 0 && restoDe7 != 0 entao
+        escreva("Não é um multiplo de 7, mas é um multiplo de 3. O valor dividido é ", multiploDe3);
+    senao
+        se restoDe7 == 0 && restoDe3 != 0 entao
+            escreva("Não é um multiplo de 7, mas é um multiplo de 3. O valor dividido é ", multiploDe7);
+        senao
+            escreva("Não é um multiplo de 7 e nem um multiplo de 3.")
+        fim_se
+    fim_se
+fim_se
+
+FIM

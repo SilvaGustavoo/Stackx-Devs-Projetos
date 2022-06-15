@@ -1,0 +1,27 @@
+O aluno tem 3 provas no semestre, calcule a média final e conclua com a sua aprovação ou não, sendo que para a aprovação a média final deve ser maior ou igual a 7.
+
+INICIO 
+
+var numeroDeNotas, resposta, media, soma
+resposta <- "calculando..."
+enquanto resposta for "calculando..." faça
+    escreva("Digite a nota da prova 1: ")
+    leia(prova1)
+    escreva("Digite a nota da prova 2: ")
+    leia(prova2)
+    escreva("Digite a nota da prova 3: ")
+    leia(prova3)
+
+    some nota1 com nota2 com nota3 isso tudo sera igual a "soma"
+    soma <- (nota1+nota2+nota3)
+    divida soma pelo numeroDeNotas atribua a resposta para a variavel "media"
+    media <- soma/numeroDeNotas
+    se media for maior e igual a 7 faça
+        resposta <- "Parabens!! Você foi aprovado"
+        escreva(resposta)
+    senao
+        resposta <- "Você foi reprovado, estude mais no ano que vem."
+        escreva(resposta)
+    fim_se
+fim_enquanto
+FIM

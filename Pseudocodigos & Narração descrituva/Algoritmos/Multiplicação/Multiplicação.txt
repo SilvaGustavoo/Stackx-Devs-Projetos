@@ -1,0 +1,39 @@
+Uma multiplicação nada mais é do que um certo número de somas sucessivas de um dado número. Por exemplo, para multiplicar 34 por 5, basta somar o número 34 com ele mesmo 5 vezes. Escreva um procedimento de multiplicação para um número X por um dado número Y.
+
+INICIO
+
+var X, Y, start, conta, resultado
+resultado <- falso
+enquanto resultado for falso faça
+    escreva("qual numero voce deseja fazer a multiplicação? (maior valor")
+    leia X
+    se X tiver letras e virgulas faça
+        escreva("Não é possível digitar letras e nem virgulas, substitua letras por numeros e virgula por ponto!!")
+    fim_se
+
+    escreva("E multiplicadopor qual outro numero? (menor valor)")
+    leia Y
+    se Y tiver letras e virgulas faça
+        escreva("Não é possível digitar letras e nem virgulas, substitua letras por numeros e virgula por ponto!!")
+    fim_se
+
+    se X for menor que Y faça
+        substitua o valor de X por Y e Y por X
+    fim_se
+
+    start <- 0
+    conta <- 0
+    enquanto start nao for igual a Y faça
+        conta
+        some conta com X
+        conta <- conta + X
+        start <- start + 1
+        continue
+    fim_enquanto
+    escreva(conta)
+    resultado <- verdade
+fim_enquanto
+
+FIM
+
+

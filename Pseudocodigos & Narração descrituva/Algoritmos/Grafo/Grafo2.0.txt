@@ -1,0 +1,84 @@
+A Figura abaixo, chamada de grafo, apresenta círculos numerados, representando pontos a serem alcançados e setas com números, indicando o tempo necessário para ir de um ponto a outro. Por exemplo, para ir de 2 até 5 o tempo necessário é 3.
+
+INICIO
+
+pisoAtual <- 0
+
+enquanto pisoAtual nao for igual a 12 faça
+    leia numeroDePercursos
+    se numeroDePercursos for igual a 0 faça
+        escreva("Erro!! Retorne ao inicio")
+        pisoAtual <- 0
+        continuue
+    fim_se
+    se numeroDePercursos for igual a 1 faça
+        leia pisoSeguinte
+        leia percurso 1
+        pisoAtual + percurso 1 = pisoAtual;
+        ir pelo percurso 1
+    fim_se
+    se numeroDePercursos for igual a 2 faça
+        leia pisoSeguinte
+        leia percurso 1
+        leia percurso 2
+        se o valor da soma do pisoAtual com o percurso 1 for igual a pisoSeguinte faça
+            ir pelo percurso 1
+            pisoAtual <- pisoAtual + percurso 1
+        senao 
+            ir pelo percurso 2
+            pisoAtual <- pisoAtual + percurso 2
+    fim_se
+    se numeroDePercursos for igual a 3 faça
+        leia pisoSeguinte
+        leia percurso 1
+        leia percurso 2
+        leia percurso 3
+        se o valor da soma do pisoAtual com o percurso 1 for igual a pisoSeguinte faça
+            ir pelo percurso 1
+            pisoAtual <- pisoAtual + percurso 1
+        senao 
+            se o valor da soma do pisoAtual com o percurso 2 for igual a pisoSeguinte faça
+                ir pelo percurso 2
+                pisoAtual <- pisoAtual + percurso 2
+            senao 
+                ir pelo percurso 3
+                pisoAtual <- pisoAtual + percurso 3
+            fim_se
+        fim_se
+    fim_se
+    se numeroDePercursos for igual a 4 faça
+        leia pisoSeguinte
+        leia percurso 1
+        leia percurso 2
+        leia percurso 3
+        leia percurso 4
+        se o valor da soma do pisoAtual com o percurso 1 for igual a pisoSeguinte faça
+            ir pelo percurso 1
+            pisoAtual <- pisoAtual + percurso 1
+        senao 
+            se o valor da soma do pisoAtual com o percurso 2 for igual a pisoSeguinte faça
+                ir pelo percurso 2
+                pisoAtual <- pisoAtual + percurso 2
+            senao 
+                se o valor da soma do pisoAtual com o percurso 3 for igual a pisoSeguinte faça                
+                    ir pelo percurso 3
+                    pisoAtual <- pisoAtual + percurso 3
+                senao
+                    ir pelo percurso 4
+                    pisoAtual <- pisoAtual + percurso 4
+                fim_se
+            fim_se
+        fim_se
+    fim_se
+    
+    se pisoAtual for menor que 12 faça
+        continue
+    fim_se
+    se pisoAtual for maior que 12 faça
+        escreva("Erro!! Retorne ao inicio")
+        pisoAtual <- 0
+        continuue
+    fim_se
+fim_enquanto
+
+FIM

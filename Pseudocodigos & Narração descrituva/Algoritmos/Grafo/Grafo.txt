@@ -1,0 +1,37 @@
+A Figura abaixo, chamada de grafo, apresenta círculos numerados, representando pontos a serem alcançados e setas com números, indicando o tempo necessário para ir de um ponto a outro. Por exemplo, para ir de 2 até 5 o tempo necessário é 3.
+
+INICIO
+
+começar
+enquanto nao chegar ao ponto 12 faça
+    ler numeroDePercursos
+    enquanto numeroDePercursos for maior que 0 faça
+    se numeroDePercursos for igual a 1 faça
+        ler precurso 1
+        ir pelo percurso 1
+    fim_se 
+    se numeroDePercursos for igual a 2 faça
+        ler percurso 1
+        ler percurso 2
+        se percuros 2 for menor que o percurso 1 faça
+            ir pelo percurso 2
+        senao 
+            ir pelo percurso 1
+        fim_se
+    fim_se 
+    se numeroDePercursos for igual a  faça
+    ler percurso 1
+    ler percurso 2
+    ler percurso 3
+        se percurso 3 for menor que percurso 2 e percurso 1 faça
+            ir pelo percurso 3
+        senao
+            se percurso 2 for menor que percurso 1 faça
+                ir pelo percurso 2
+            senao
+                ir pelo percurso 1
+            fim_se
+        fim_se
+    fim_se
+fim_enquanto
+FIM

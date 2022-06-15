@@ -1,0 +1,34 @@
+Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm).
+
+INICIO
+inteiro numeroLados;
+real lado;
+real area;
+
+escreva("Digite quantos lados tem o polígono: ")
+leia(numeroLados)
+escreva("Digite a medida do lado(cm): ")
+leia(lado)
+se numeroLados < 3 entao
+    escreva("Não existe polígono com menos de 3 lados!!");
+        se numeroLados == 3 entao 
+            escreva("Ele é um TRIÂNGULO, sua área é 'A = lado ao quadrado * raiz quadrada de 3 / 4'.");
+            area <- (lado**2)*(3**(1/2) / 4
+            escreva("O valor da área é ", area);
+                se numeroLados == 4 entao
+                    escreva("Ele é um QUADRADO, sua área é 'A = base * altura'.");
+                    area <- lado * lado
+                    escreva("O valor da área é ", area);
+                        se numeroLados == 5 entao
+                            escreva("Ele é um PENTÁGONO, sua área é 'A = (lado ao quadrado * raiz quadrada de 3 / 4) * 5'. ");
+                            area <- ((lado**2) * (3**(1/2) / 4) * 5 
+                            escreva("O valor da área é ", area);
+                                se numeroLados > 5 entao
+                                    escreva("Não foi possivel identificar o polígono, tente um com lados variando entre 3 a 5");
+                                fim_se
+                        fim_se
+                fim_se
+        fim_se
+fim_se
+
+FIM

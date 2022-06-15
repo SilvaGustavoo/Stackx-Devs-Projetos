@@ -1,0 +1,27 @@
+Faça um programa para calcular a área de um triângulo e que não permita a entrada de dados inválidos, ou seja, medidas menores ou iguais à zero.
+
+
+INICIO
+
+maiorQue0: bool
+area, b, h: float
+
+repita
+    escreva("Digite a mediada da base(b) do triangulo: ")
+    leia(b)
+
+    escreva("Digite a altura(h) do triangulo: ")
+    leia(h)
+
+    se (b <= 0 E h <= 0) entao
+        escreva("As medidas do triângulo não podem ser menor ou igual a zero. Digite novamente...")
+        maiorQue0 = false
+    senao
+        maiorQue0 = verdade
+    fim_se
+ate(maiorQue0 == verdade)
+
+area = (b*h)/2
+escreva("A formula é composta por: (base * altura)/2 e seu resultado é ", area)
+
+FIM

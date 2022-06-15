@@ -1,0 +1,110 @@
+Escreva os passos necessários para uma pessoa efetuar uma compra em um site da Internet, fazendo o pagamento por meio de cartão de crédito.
+
+INICIO
+
+var endereço do site, produto, garantia, seguro, CEP, redeSocial, usuario, senha, codigo de verificação, entrega, retirada, endereço, forma de entrega, local de retirada, cupom, codigoDoCupom, forma de pagamento, cartão, digite o numero do cartão, nome completo, validade, codigo de segurança, umero de parcelas.
+
+enquanto compraAprovada nao for verdade faça
+    Abra o browser
+    digite o endereço do site
+    pesquise o produto desejado
+    escolhe as especificações desejadas
+    dentre as especificações escolha o de menor valor 
+    clique em "adicionar á sacola"
+    escolha a opção de garantia
+    escolha a opção de seguro
+    clique em "ir para sacola"
+    digite seu CEP
+    clique em "Continuar"
+    se ja for cliente faça
+        se for fazer login com rede social faça
+            Leia redeSocial
+            se redeSocial for igual a "Facebook" faça
+                escreva seus dados de usuario e senha
+                aperte em login
+                confirme a interaçao Facebook-Site
+            se redeSocial for igual a "Google" faça
+                escreva seus dados de usuario e senha
+                aperte em login
+            fim_se   
+        senao
+            escreva seus dados de usuario e senha
+            aperte em "Continuar"
+        fim_se
+    senao
+        selecione "Quero criar uma conta" ou "Cadastre-se"
+        coloque seus dados
+        confirme se estão corretos
+        clique em continuar
+        faça a validação do email
+        acesse o email cadastrado
+        leia o codigo de verificação
+        coloque o codigo informado no site
+        confirme cadastro
+    fim_se
+    leia entrega
+    leia retirada
+    enquanto frete nao for verdade faça
+        se entrega for verdade faça
+            confirme o seu endereço
+            se endereço estiver errado faça
+                clique em "alterar endereço de entrega"
+                coloque os dados corretos
+                continue
+            senao
+                escolha a forma de entrega padrao ou agendada
+                leia forma de entrega
+                se forma de entrega for agendada
+                    escolha a data de recebimento
+                    clique em confirmar
+                    Frete <- verdade
+                senao
+                    selecione entrega padrao
+                    Frete <- verdade
+                fim_se
+            fim_se
+        fim_se
+        se retirada for verdade faça
+            leia local de retirada
+            escolha o local de retirada de menor distancia
+            clique em "confirmar"
+            Frete <- verdade
+        fim_se
+        se entrega e retirada for falso faça
+            escreva(escolha uma das opções)
+            continue
+        fim_se
+    fim_enquanto
+    escreva("Tem cupom? (S/N)")
+    leia cupom
+    se cupom for "S" faça
+        escreva("Digite codigo do cupom")
+        leia codigoDoCupom
+        clique em "Aplicar"
+        se cupom não estiver disponivel faça
+            escreva("Este cupom não esta disponivel para esta compra por motivo X")
+        fim_se
+    fim_se
+    selecione "formas de pagamento" ou "escolha forma de pagamento"
+    forma de pagamento <- falso
+    enquanto forma de pagamento for falso faça
+    escreva("Tem cartão? (S/N)")
+    leia(cartão)
+    se cartão for igual a "S" faça
+        digite o numero do cartão
+        nome completo
+        validade
+        codigo de segurança
+        selecione o numero de parcelas
+        clique em fechar pedido
+        se numero do cartão e validade e codigo de segurança forem incorretos faça
+            escreva("Transação mal sucedida, dados do pagamento incorretos")
+            continue
+        fim_se
+        forma de pagamento <- verdade
+    senao
+        selecione outra forma de pagamento
+    fim_se
+fim_enquanto
+
+FIM
