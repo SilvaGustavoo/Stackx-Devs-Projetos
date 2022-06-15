@@ -1,0 +1,38 @@
+Um endocrinologista deseja controlar a saúde de seus pacientes e, para isso, se utiliza do Índice de Massa Corporal (IMC). Sabendo-se que o IMC é calculado através da seguinte fórmula:
+IMC = peso / altura2
+Onde: 
+peso é dado em Kg
+altura é dada em metros
+Crie um programa que dados o peso e altura do paciente, exiba sua faixa de risco, baseando-se na seguinte tabela:
+
+INICIO
+
+escreva("CALCULANDO SEU IMC")
+escreva("Digite seu peso: ")
+leia(peso)
+escreva("Digite sua altura: ")
+leia(altura)
+
+IMC = peso / (altura**2)
+
+se (IMC < 20) entao
+    escreva("Abaixo do peso")
+senao
+    se (IMC >= 20 && IMC <= 25) entao
+        escreva("Normal")
+    senao
+        se (IMC > 25 && IMC <= 30) entao
+            escreva("Excesso de peso")
+        senao
+            se (IMC > 30 && IMC <= 35) entao
+                escreva("Obesidade")
+            senao
+                se (IMC > 35) entao
+                    escreva("Obesidade mórbida")
+                fim_se
+            fim_se
+        fim_se
+    fim_se
+fim_se
+
+FIM

@@ -1,0 +1,35 @@
+Uma empresa decidiu dar uma gratificação de Natal a seus funcionários, baseada no número de horas extras e no número de horas que o funcionário faltou ao trabalho. O valor do prêmio é obtido pela consulta na tabela a seguir, em que:
+H = (número de horas extras) – 2/3 * (número de horas-falta)
+
+INICIO
+
+REAL horasExtras, horasFaltas, H;
+
+escreva("Digite o número de horas extras: ")
+leia(horasExtras)
+escreva("Digite o número de horas-faltas: ")
+leia(horasFaltas)
+
+H = horasExtras - (2/3 * horasFaltas)
+
+se (H > 2400) entao 
+    escreva("O funcionério teve uma gratificação no valor de R$ 500,00 reais.")
+senao
+    se (H <= 2400 && H => 1800) entao 
+        escreva("O funcionério teve uma gratificação no valor de R$ 400,00 reais.")
+    senao
+        se (H < 1800 && H => 1200) entao 
+            escreva("O funcionério teve uma gratificação no valor de R$ 300,00 reais.")
+        senao
+            se (H < 1200 && H => 600) entao 
+                escreva("O funcionério teve uma gratificação no valor de R$ 200,00 reais.")
+            senao
+                se (H < 600) entao 
+                    escreva("O funcionério teve uma gratificação no valor de R$ 100,00 reais.")
+                fim_se
+            fim_se
+        fim_se
+    fim_se
+fim_se
+
+FIM

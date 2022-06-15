@@ -1,0 +1,44 @@
+Desenvolva um programa que dada a data de nascimento de uma pessoa e a data atual, informe a idade dessa pessoa em anos completos.
+
+
+INICIO
+
+INTEIRO dia, diaHoje, diasIdade, mes, mesHoje, mesIdade, ano, anoHoje, anoIdade;
+
+escreva("Qual sua data de nascimento?")
+escreva("Digite o dia em que você nasceu: ")
+leia(dia)
+escreva("Digite o mês em que você nasceu: ")
+leia(mes)
+escreva("Digite o ano em que você nasceu: ")
+leia(ano)
+
+escreva("Agora digite a data atual")
+
+escreva("Digite o dia de hoje: ")
+leia(diaHoje)
+escreva("Digite o mês de hoje: ")
+leia(mesHoje)
+escreva("Digite o ano de hoje: ")
+leia(anoHoje)
+
+se (diaHoje < dia) entao
+    diasIdade = (diaHoje + 30) - dia
+    mesHoje = mesHoje - 1
+senao
+    diasIdade = diaHoje - dia
+fim_se
+se (mesHoje < mes) entao
+    mesIdade = (mesHoje + 30) - mes
+    anoHoje = anoHoje - 1
+senao
+    mesIdade = mesHoje - mes
+fim_se
+
+anoIdade = anoHoje - ano
+
+
+
+escreva("Você possui ", diasIdade, " dias, ", mesIdade, " mes(meses) e ", anoHoje, " anos de idade")
+
+FIM

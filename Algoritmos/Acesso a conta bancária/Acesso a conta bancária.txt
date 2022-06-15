@@ -1,0 +1,37 @@
+Um cliente deseja fazer a consulta do saldo de sua conta corrente no computador, por meio de uma aplicação de home banking. Suponha que o computador esteja ligado e conectado à Internet. A seguir, estão os passos que poderiam ser utilizados, porém, foram colocados fora de ordem. Procure organizá-los na ordem correta e escreva o algoritmo representando os dois tipos:
+
+INICIO
+
+enquanto nao visualizar o saldo faça
+
+    str nomedousuario
+    int conta, agência, senha 
+    
+    Abrir o navegador.
+    enquanto nao carregar a pagina faça
+        
+        se o navegador estiver aberto: faça
+            Digitar o endereço do site do banco.
+        fim_se
+
+        Preencher dados do número da agência e conta.
+        Confirmar ou digitar o nomedousuário.
+        Inserir a senha.
+        Clicar no botão “OK” de acesso.    
+        
+        se numero da agencia, conta e senha forem diferentes: faça
+            escreva ("Numero da agencia e conta ou senha estão incorretos, por favor tente novamente")
+        fim_se
+
+        se der algum erro faça
+            continue
+        fim_se
+    fim_enquanto
+
+    Selecionar a opção de saldo.
+    Encerrar a sessão.
+fim_enquanto
+
+Fechar o navegador.
+
+FIM

@@ -1,0 +1,32 @@
+Escreva um programa que leia o valor de 3 ângulos de um triângulo e escreva se o triângulo é Acutângulo, Retângulo ou Obtusângulo
+
+INICIO
+
+real angulo1;
+real angulo2;
+real angulo3;
+
+
+escreva("Digite o valor dos ângulos do triângulo, para descobrir em qual categoria ele está.(digite somente os números)");
+escreva("Digite o primeiro ângulo: ");
+leia(angulo1);
+escreva("Digite o segundo ângulo: ");
+leia(angulo2);
+escreva("Digite o terceiro ângulo: ");
+leia(angulo3);
+
+se angulo1 > 90 OU angulo2 > 90 OU angulo3 > 90 entao
+    escreva("Ele é um Triângulo Obtusângulo: possui um ângulo obtuso. (maior que90º)");
+        se angulo1 == 90 OU angulo2 == 90 OU angulo3 == 90 entao
+            escreva("Ele é um Triângulo Retângulo: possui um ângulo reto. (igual a 90º)");
+                se angulo1 < 90 E angulo2 < 90 E angulo3 < 90 entao 
+                    escreva("Ele é um TriânguloAcutângulo: possui três ângulos agudos. (menor que 90º)");
+                        se (angulo1 + angulo2 + angulo3) > 180 entao
+                            escreva("Este não é um triângulo!!");
+                        fim_se 
+                fim_se
+        fim_se
+fim_se
+
+
+FIM

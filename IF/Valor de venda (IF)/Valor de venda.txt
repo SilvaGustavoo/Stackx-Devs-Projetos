@@ -1,0 +1,30 @@
+Um comerciante calcula o valor de venda, tendo em vista a tabela a seguir:
+
+INICIO
+
+REAL compra, venda;
+
+escreva("Qual o valor da compra?: ")
+leia(compra)
+
+se (compra < 10) entao
+    venda = compra*1.7
+    escreva(venda)
+senao
+    se (compra >= 10 && compra < 30) entao
+        venda = compra*1.5
+        escreva(venda)
+    senao
+        se (compra >= 30 && compra < 50) entao
+            venda = compra*1.4
+            escreva(venda)
+        senao
+            se (compra >= 50) entao
+                venda = compra*1.3
+                escreva(venda)
+            fim_se
+        fim_se
+    fim_se
+fim_se
+
+FIM

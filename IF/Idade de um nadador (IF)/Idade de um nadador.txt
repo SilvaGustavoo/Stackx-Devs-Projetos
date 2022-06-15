@@ -1,0 +1,29 @@
+Faça um programa que receba a idade de um nadador e mostre sua categoria, usando as regras a seguir. Para idade inferior a 5, qual mensagem deveríamos mostrar?
+
+INICIO
+
+idade: inteiro
+
+escreva("Qual é sua idade?: ")
+leia(idade)
+
+se idade < 5 entao
+    escreva("Você é muito novo para participar dessa competição, a idade minima para entrar emalguma categoria é de 5 anos")
+fim_se
+se idade >= 5 E idade < 8 então
+    escreva("Sua categoria é infantil!!")
+fim_se
+se idade >= 8 E idade < 11 então
+    escreva("Sua categoria é Juvenil!!")
+fim_se
+se idade >= 11 E idade < 16 então
+    escreva("Sua categoria é Adolescente!!")
+fim_se
+se idade >= 16 E idade < 31 então
+    escreva("Sua categoria é Adulto!!")
+fim_se
+se idade > 30
+    escreva("Sua categoria é Sênior!!")
+fim_se
+
+FIM

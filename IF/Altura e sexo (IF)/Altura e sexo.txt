@@ -1,0 +1,25 @@
+Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes Fórmulas:
+
+
+INICIO
+
+caracter sexo;
+real altura;
+real pesoIdeal;
+
+escreva("Pronto para sabver seu peso ideal? informe os dados a seguir e desecubra seu Peso Ideal. ");
+escreva("Antes de comceçarmos me informe seu sexo \n 1: Feminino. \n 2: Masculino. );
+leia(sexo);
+escreva("Digite agora sua altura (digite '.' ao inves de ','. Ex: 1.67): ");
+leia(altura);
+se sexo == 1 ou sexo == "Feminino" entao
+    pesoIdeal <- (62.1 * altura) - 44.7;
+    escreva("Seu peso ideai é de ", pesoIdeal, " Kg.");
+        se sexo == 2 ou sexo == "Masculino" entao
+            pesoIdeal <- (72.7 * altura) - 58;
+            escreva("Seu peso ideal é de ", pesoIdeal, " Kg.");
+        fim_se
+fim_se
+
+
+FIM

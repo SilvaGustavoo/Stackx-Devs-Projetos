@@ -1,0 +1,22 @@
+Desenvolva um programa que dada a idade de uma pessoa, determine sua condição de eleitor conforme a tabela abaixo:
+
+INICIO
+
+INTEIRO idade, anosFaltantes;
+
+escreva("Digite sua idade: ")
+leia(idade)
+anosFaltantes = 16 - idade
+
+se idade < 16 entao
+    escreva("você é muito novo(a) para votar ainda, aguarde mais ", anosFaltantes, " anos e você poderá fazer parte da escolha mais importante do país!!.")
+        se (idade >= 16 E idade <= 18) OU idade >= 65
+            escreva("Você pode votar, mas o ato de votar é uma escolha e não uma obrigação.")
+                se idade >= 18 E idade < 65 entao
+                    escreva("Você não so pode, mas como deve votar este ano!!")
+                fim_se
+        fim_se
+fim_se
+
+
+FIM

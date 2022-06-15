@@ -1,0 +1,44 @@
+Supondo que você possua uma calculadora simples, reescreva o algoritmo do exercício 4 indicando as operações que devem ser realizadas por meio das teclas que precisam ser acionadas.
+
+INICIO
+
+    pegue a calculadora
+    apertar o botão "OFF/ON"
+enquanto não ler o resultado faça
+    resultado <- (5-4+(2*4))
+    n <- 0
+    se o valor de n for diferente faça
+        escreva("Vc digitou um numero diferente de ", n)
+    senao
+        n <- 2
+        pressione o botao com o digito 2
+    senao 
+        se for digitado um valor diferente de "x" ou "*"
+            n <- 0
+        senao 
+            n <- 1
+        n <- 1
+        pressione o botão com o simbolo "x" ou pressione "*"   
+    senao
+        n <- 4
+        pressione o digito 4 
+    senao
+        n <- "-"
+        pressione o simbolo "-"
+    senao
+        n <- 4
+        pressione o digito 4
+    senao
+        n <- "+"
+        pressione o simbolo de soma "+"
+    senao
+        n <- 5
+        pressione o digito 5
+    senao
+        n <- "="
+        pressione o simbolo de igual "="
+    fim_se
+    escreva(resultado) 
+fim_enquanto
+
+FIM

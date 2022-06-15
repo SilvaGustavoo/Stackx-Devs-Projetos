@@ -1,0 +1,116 @@
+Faça um programa que receba o preço, a categoria (1 – limpeza; 2 – alimentação; ou 3 – vestuário) e a situação (R – produtos que necessitam de refrigeração; e N – produtos que não necessitam de refrigeração). Calcule e mostre:
+
+INICIO
+
+nomeProduto, categoria, situacao, novaPesquisa : char
+preco, novoPreco : float
+
+novaPesquisa = S
+
+enquanto (novaPesquisa == S) faca
+
+    escreva("Digite o nome do produto: ")
+    leia(nomeProduto)
+
+    escreva("Digite o preço do produto: ");
+    leia(preco);
+
+    escreva("Qual categoria é o produto (1 – limpeza; 2 – alimentação; ou 3 – vestuário).")
+    escreva("Digite apenas o número: ")
+    leia(categoria)
+
+    enquanto (categoria <> 1 OU categoria <> 2 OU categoria <> 3) faca
+        escreva("categoria inválida, porfavor digite somente os números indicados a cima. Tente novamente... ")
+
+        escreva("Qual categoria é o produto (1 – limpeza; 2 – alimentação; ou 3 – vestuário).")
+        escreva(Digite apenas o número: ")
+        leia(categoria)
+    fim_enquanto    
+
+    se (categoria == 2) entao
+        escreva("Qual a situação do produto? (R – produtos que necessitam de refrigeração; e N – produtos que não necessitam de refrigeração) ")
+        escreva("Digite somente a letra em maiúsculo que representa a situação: ")
+        leia(situacao)
+
+        enquanto (situacao <> "R" OU situacao <> "N") faca
+            escreva("Situação foi inválida por favor digite R ou N apenas. Digite novamente...)
+
+            escreva("Qual a situação do produto? (R – produtos que necessitam de refrigeração; e N – produtos que não necessitam de refrigeração) ")
+            escreva("Digite somente a letra em maiúsculo que representa a situação: ")
+            leia(situacao)
+        fim_enquanto
+    fim_se
+
+    limpatela
+
+    se (preco <= 25) entao
+
+        escolha categoria 
+        caso 1
+            escreva("O produto teve um percentual de aumento de 5% e menos um imposto de 8%")
+            novoPreco = (preco * 1.05) - (preco * 1.05)*0.08
+            escreva("O preço ajustado é de R$ ", novoPreco)
+            pare
+        caso 2 
+            se (situacao == R) entao
+                escreva("O produto teve um percentual de aumento de 8% e menos um imposto de 5%")
+                novoPreco = (preco * 1.05) - (preco * 1.05) * 0.08
+                escreva("O preço ajustado é de R$ ", novoPreco)
+            senao
+                escreva("O produto teve um percentual de aumento de 8% e menos um imposto de 8%")
+                novoPreco = (preco * 1.08) - (preco * 1.08) * 0.08
+                escreva("O preço ajustado é de R$ ", novoPreco)
+            fim_se
+            pare
+        caso 3 
+            escreva("O produto teve um percentual de aumento de 10% e menos um imposto de 8%")
+            novoPreco = (preco * 1.1) - (preco * 1.1) * 0.08
+            escreva("O preço ajustado é de R$ ", novoPreco)
+            pare
+        fim_escolha
+    senao
+        escolha categoria 
+        caso 1
+            escreva("O produto teve um percentual de aumento de 12% e menos um imposto de 8%")
+            novoPreco = (preco * 1.12) - (preco * 1.12) * 0.08
+            escreva("O preço ajustado é de R$ ", novoPreco)
+            pare
+        caso 2
+            se (situacao == R) entao
+                escreva("O produto teve um percentual de aumento de 15% e menos um imposto de 5%")
+                novoPreco = (preco * 1.15) - (preco * 1.15) * 0.05
+                escreva("O preço ajustado é de R$ ", novoPreco)
+            senao
+                escreva("O produto teve um percentual de aumento de 18% e menos um imposto de 8%")
+                novoPreco = (preco * 1.15) - (preco * 1.15)*0.08
+                escreva("O preço ajustado é de R$ ", novoPreco)
+            fim_se
+            pare
+        caso 3
+            escreva("O produto teve um percentual de aumento de 10% e menos um imposto de 8%")
+            novoPreco = (preco * 1.18) - (preco * 1.18)* 0.08
+            escreva("O preço ajustado é de R$ ", novoPreco)
+            pare
+        fim_escolha
+    fim_se
+
+    limpatela
+
+    escreva("Produto: ", nomeProduto)
+    escreva("Preço: ", preco)
+    escreva("Categoria: ", categoria)
+    escreva("Peço com ajuste: ", novoPreco)
+
+    se (novoPreco <= 50) entao
+        escreva("Barato!!")
+    senaose (novoPreco > 50 E novoPreco < 120) entao
+        escreva("Normal!!")
+    senao
+        escreva("Caro!!!")
+    fim_se
+
+    escreva("Deseja fazer outra pesquisa? {S/N})
+    leia(novaPesquisa)
+fim_enquanto
+
+FIM

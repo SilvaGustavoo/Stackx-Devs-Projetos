@@ -1,0 +1,36 @@
+Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.
+
+
+INICIO
+inteiro x;
+inteiro y;
+inteiro z;
+
+escreva("Indique 3 numeros e será organizado do menor para o maior!!")
+escreva("Digite o primeiro número: ")
+leia(x)
+escreva("Digite o segundo número: ")
+leia(y)
+escreva("Digite o terceiro número: ")
+leia(z)
+
+se x < y E x < z E y < z entao
+    escreva("A sequência então ficou ", x, ", ", y, ", ", z, ".");
+        se x < y E x < z E z < y entao
+            escreva("A sequência então ficou ", x, ", ", z, ", ", y, ".");
+                se z < y E z < x E x < y entao
+                    escreva("A sequência então ficou ", z, ", ", x, ", ", y, ".");
+                        se z < y E z < x E y < x entao
+                            escreva("A sequência então ficou ", z, ", ", y, ", ", x, ".");
+                                se y < z E y < x E z < x entao
+                                    escreva("A sequência então ficou ", y, ", ", z, ", ", x, ".");                                
+                                        se y < z E y < x E x < z entao
+                                            escreva("A sequência então ficou ", y, ", ", x, ", ", z, ".");
+                                        fim_se
+                                fim_se
+                        fim_se
+                fim_se
+        fim_se
+fim_se
+
+FIM

@@ -1,0 +1,21 @@
+Desenvolva um programa que dado um número, imprima uma das mensagens: é múltiplo de 3 ou não é múltiplo de 3. 
+
+
+INICIO
+
+real multiploDe3;
+inteiro numero;
+inteiro resto;
+
+escreva("Digite um número inteiro: ")
+leia(numero)
+resto <- numero % 3
+multiploDe3 <- numero / 3
+
+se resto == 0 entao
+    escreva("É um multiplo de 3!! e seu valor é ", multiploDe3)
+senao
+    escreva("Não é um multiplo de 3, o valor dividido é ", multiploDe3)
+fim_se
+
+FIM

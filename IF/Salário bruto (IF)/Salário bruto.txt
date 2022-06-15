@@ -1,0 +1,24 @@
+Faça um programa que receba o salário bruto de um funcionário e, usando a tabela a seguir, calcule e mostre o valor a receber. Sabe-se que este é composto pelo salário bruto acrescido de gratificação e descontado o imposto de 7% sobre o salário.
+
+INICIO
+salarioBruto: Real
+#const imposto = 0.07
+
+escreva("Digite o seu salário bruto: ")
+leia(salarioBruto)
+salarioRecebido = salarioBruto*(1-imposto)
+
+se salarioBruto <= 350 então 
+    escreva("Parabéns você recebeu R$ 100,00 de gratificação seu salário a receber é de R$ ", salarioRecebido)
+        se salarioBruto > 350 E salarioBruto <= 600 então
+            escreva("Parabéns você recebeu R$ 75,00 de gratificação seu salário a receber é de R$ ", salarioRecebido)
+                se salarioBruto > 600 E salarioBruto <= 900 então
+                    escreva("Parabéns você recebeu R$ 50,00 de gratificação seu salário a receber é de R$ ", salarioRecebido)
+                        se salarioBruto > 900 então
+                            escreva("Parabéns você recebeu R$ 35,00 de gratificação seu salário a receber é de R$ ", salarioRecebido)
+                        fim_se
+                fim_se
+        fim_se
+fim_se
+
+FIM
