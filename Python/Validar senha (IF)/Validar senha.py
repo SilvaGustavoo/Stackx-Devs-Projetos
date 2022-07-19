@@ -9,9 +9,11 @@
 import getpass
 
 senha = getpass.getpass(prompt='Digite sua Senha: ', stream="*")
-
-
-if (senha == "1234"):
-    print("ACESSO PERMITIDO")
-else:
-    print("ACESSO NEGADO")
+entrou = False
+while (entrou == False):
+    if (senha == "1234"):
+        print("ACESSO PERMITIDO")
+        entrou = True
+    else:
+        print("ACESSO NEGADO")
+        senha = getpass.getpass(prompt='Digite sua Senha: ', stream="*")

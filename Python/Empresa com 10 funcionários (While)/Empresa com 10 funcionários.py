@@ -1,10 +1,16 @@
+# Dev: Gustavo Santos Silva
+# Data: 21 / 06 / 2022
+# Version: 1.1
+
+
 funcionario = 1
 laco1 = False
 laco2 = False
-sair = False
+
 salarioMinimo = 450
 
 while (funcionario <= 10):
+    sair = False
     nome = input("Digite o nome do funcionário: ")
     codigo = input("Digite o código do funcinário: ")
     horasTrabalhadas = float(input("Digite o número de horas trabalhadas: "))
