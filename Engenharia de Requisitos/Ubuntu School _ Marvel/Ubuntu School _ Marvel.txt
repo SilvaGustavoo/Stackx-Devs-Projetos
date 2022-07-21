@@ -1,0 +1,5 @@
+Link do Projeto: Ubuntu School
+
+# O projeto foi feito pensado em uma escola virtual onde o aluno pode ver suas aulas e realizar as atividades anexadas pelos professores. Vale ressaltar que essa pagina criada é mais focada para os alunos.
+
+LINK: https://marvelapp.com/prototype/di785h1
