@@ -1,1 +1,5 @@
+Link do Projeto: CockFlix
+
+o projeto consiste na ideia de escrever um prototipo o qual fica disponibilizado diversas receitas de culinária. Será descrito receitas de preferência do usuário e qualificará receitas de outros sites famosos, para que encontre a melhor opção da variedade a qual o cliente deseja. E tudo isso usando um portal semelhante a netflix... Projeto em andamento, em Breve mais!! 
+
 LINK: https://www.figma.com/file/W2sZNiFieSAyFN4cGxDiBW/CockFlix?node-id=0%3A1
