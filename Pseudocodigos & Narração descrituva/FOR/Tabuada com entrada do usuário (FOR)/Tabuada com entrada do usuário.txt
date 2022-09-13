@@ -1,0 +1,18 @@
+Faça um programa para calcular a tabuada de qualquer número digitado pelo usuário.
+
+INICIO
+
+conta, x: float
+i: int
+
+escreva("Digite qual valor deseja saber a taboada: ")
+leia(x)
+
+i = 0
+
+para i de 1 ate 10
+    conta = i * x
+    escreva(X, " X ", i, " = ", conta)
+fim_para
+
+FIM

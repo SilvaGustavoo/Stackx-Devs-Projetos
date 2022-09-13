@@ -1,0 +1,76 @@
+Faça um programa que receba dois números e execute as operações listadas a seguir, de acordo com a escolha do usuário.
+
+INICIO
+
+novoNumero: char
+x, y, media, diferenca, produto, divisao: float
+
+novoNumero = "S"
+
+enquanto (novoNumero == S) faca
+    escreva("Digite um número: ")
+    leia(x)
+
+    escreva("Digite um segundo número: ")
+    leia(y)
+
+    escreva("Vamos fazer algumas operações com números")
+    escreva("Selecione algumas das opções a seguir para que a operação desejada ocorra (porfavor digite o valor para selecionar a opção).")
+
+    escreva(" 1 - Média entre os números digitados")
+    escreva(" 2 - Diferença do maior pelo menor")
+    escreva(" 3 - produto entre os números digitados")
+    escreva(" 4 - Divisão do primeiro pelo segundo")
+
+    escreva(" ")
+    escreva("Qual opção você deseja?")
+    leia(opcao)
+
+    enquanto (opcao < 1 E opcao > 4) faca
+        escreva("Opção invalida digite um valor entre 1 e 4 de acordo com a opção desejada. ")
+        escreva(" 1 - Média entre os números digitados")
+        escreva(" 2 - Diferença do maior pelo menor")
+        escreva(" 3 - produto entre os números digitados")
+        escreva(" 4 - Divisão do primeiro pelo segundo")
+        leia(opcao)
+    fim_enquanto
+
+    escolha opcao 
+    caso 1 
+        media = (x + y)/2
+        escreva("Você selecionou a opção de média!!")
+        escreva("A média entre os valores digitados é ", media)
+        pare
+    caso 2 
+        se (x > y) entao
+            diferenca = x - y
+        senaose (x < y) entao
+            diferenca = y - x
+        senao
+            diferenca = 0
+        fim_se
+        escreva("Você selecionou a opção de diferença!!")
+        escreva("A diferença entre os números digitados é ", diferenca)
+        pare
+    caso 3
+        produto = x*y
+        escreva("Você selecionou a opção de produto/multiplicação!!")
+        escreva("A multiplicaçãao pelos dois valores é ", produto);
+        pare
+    caso 4
+        divisao = x/y
+        escreva("Você selecionou a opção de Divisão!!")
+        escreva("A divisão entre os dois valores é de ", divisao);
+        pare
+    default
+        escreva("Houve um problema na digitação dos valores ou da opção. Verifique e tente novamente.")
+    fim_escolha
+    escreva("Deseja tentar um número diferente? [S/N] ")
+    leia(novoNumero)
+    enquanto (novoNumero <> "S" OU novoNumero <> "N") faca
+        escreva("Digite apenas as letras em maiuscula S ou N")
+        leia(novoNumero)
+    fim_enquanto
+fim_enquanto
+
+FIM
