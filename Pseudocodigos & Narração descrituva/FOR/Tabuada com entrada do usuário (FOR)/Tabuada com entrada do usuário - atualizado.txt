@@ -1,0 +1,21 @@
+Faça um programa para calcular a tabuada de qualquer número digitado pelo usuário.
+
+INICIO
+
+conta, x: float
+i, y: int
+
+escreva("Digite qual valor deseja saber a taboada: ")
+leia(x)
+
+escreva("Digite até quanto deseja que sua taboada vá (digite somente números inteiros): ")
+leia(y)
+
+i = 0
+
+para i de 1 ate y
+    conta = i * x
+    escreva(X, " X ", i, " = ", conta)
+fim_para
+
+FIM

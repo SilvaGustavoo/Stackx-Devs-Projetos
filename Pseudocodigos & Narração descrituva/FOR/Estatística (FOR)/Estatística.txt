@@ -1,0 +1,118 @@
+Foi feita uma estatística em cinco cidades brasileiras para coletar dados sobre acidentes de trânsito. Foram obtidos os seguintes dados:
+
+a) código da cidade;
+
+b) número de veículos de passeio;
+
+c) número de acidentes de trânsito com vítimas.
+
+Deseja-se saber:
+
+a) Qual é o maior e qual é o menor índice de acidentes de trânsito e a que cidades pertencem;
+
+b) Qual é a média de veículos nas cinco cidades juntas;
+
+c) Qual é a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.
+
+INICIO
+
+codigoCidade: char
+cidades, acidentesTotais, numeroVeiculos, numeroAcidentes, laco1, laco2, x, totalVeiculos: int
+indice, indice1, indice2, indice3, indice4, indice5, indiceMaior, indiceMenor, mediaVeiculos, mediaAcidentes: float
+
+
+cidades = 0             //Contador de cidades
+acidentesTotais = 0     //Acomulador de acidentes
+
+x = 0                   //Contador de cidades com menos de 2000 automoveis
+
+laco1 = 0               //laço para descobrir o indice maior
+laco2 = 0               //laço para descobrir o indice menor 
+
+para cidades de 1 ate 5
+    escreva("Código da cidade: ")
+    leia(codigoCidade)
+    escreva("Número de veículos: ")
+    leia(numeroVeiculos)
+    escreva(Número de acidentes(com vítinas): ")
+    leia(numeroAcidentes)
+
+    indice = numeroAcidentes/numeroVeiculos
+
+                                                    /// Usei escolha para diferenciar variaveis de acordo com a cidade
+
+    escolha cidades                             
+    caso 1 
+        indice1 = indice
+
+        indiceMaior = indice1
+        cidadeMaior = codigoCidade
+
+        indiceMenor = indice1
+        cidadeMenor = codigoCidade
+
+        pare
+    caso 2 
+        indice2 = indice
+        pare
+    caso 3 
+        indice3 = indice
+        pare
+    caso 4 
+        indice4 = indice
+        pare
+    caso 5 
+        indice5 = indice
+        pare
+    fim_escolha
+
+                                                    ///Laço para descobrir o maior número, substituindo se o indice anterior for maior
+
+    enquanto laco1 < cidade faca
+        se (indiceMaior >= indice) entao
+            laco1 = laco1 + 1
+        senao
+            indiceMaior = indice
+            cidadeMaior = codigoCidade
+            laco1 = laco1 + 1
+        fim_se
+    fim_enquanto
+
+                                                    ///Laço para descobrir o menor número, substituindo se o indice anterior for menor    
+
+    enquanto laco2 < cidade faca
+        se (indiceMenor <= indice)
+            laco2 = laco2 + 1
+        senao
+            indiceMenor = indice
+            cidadeMenor = codigoCidade
+            laco2 = laco2 + 1
+        fim_se
+    fim_enquanto
+
+    totalVeiculos = totalVeiculos + numeroVeiculos
+
+                                                    ///Selecionando apenas cidades abaixo de 2000 veículos
+
+    se numeroVeiculos <= 2000 faca
+        acidentesTotais = acidentesTotais + numeroAcidentes
+        x = x + 1
+    fim_se
+fim_para
+
+
+mediaVeiculos = totalVeiculos/5
+
+mediaAcidentes = acidentesTotais / x
+
+                                    ///RESPOSTA AO USUÁRIO///
+
+escreva("O maior indíce de acidentes é ", indiceMaior, "Na cidade com código ", cidadeMaior)
+
+escreva("E com menor índice é ", indiceMenor, ". Sendo a cidade com o código ", cidadeMenor)
+
+escreva("A média de veículos de todas as 5 cidades é ", mediaVeiculos, " veículos.")
+
+escreva("A média de acidentes nas cidades com menos de 2000 veículos é ", mediaAcidentes, " vítimas.")
+
+FIM
