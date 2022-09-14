@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Author" content="Gustavo Santos Silva - gustavosantossilva122001@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade e Peso</title>
+</head>
+<body>
+    
+    <form style="width: fit-content;border: .5px black solid" action="Calculo situação" name="formulario" >
+        <h2>Digite a baixo para saber sua situação!!</h2>
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="text" name="idade" id="idade" placeholder="Digite sua idade em anos.">
+        <br>
+        <br>
+        <label for="peso">Peso:</label>
+        <input type="text" name="peso" id="peso" placeholder="Digite seu peso em Kg.">
+        <br>
+        <br>
+        <label for="situacao">Situação:</label>
+        <input type="text" name="situacao" id="situacao" placeholder="Aperte em calcular.">
+        <br>
+        <br>
+        <p style="background-color: rgba(128, 128, 128, 0.319); width:max-content; padding: 1px 20px; font-weight:bold; cursor:pointer;border: 2px black solid;" onclick="calculo()">Calcular</p>
+        
+    </form>
+
+
+
+    
+    <script>
+        function calculo() {
+
+        let idade = parseInt(document.getElementById("idade").value)
+        let peso = parseFloat(document.getElementById("peso").value)
+        let situacao
+
+
+
+        if (idade<20 && peso<60) {
+        situacao = 9
+        } else if(idade>=20 && idade<50 && peso<60) {
+        situacao = 6
+        } else if(idade>50 && peso<60) {
+        situacao = 3
+        } else if (idade<20 && peso>60 && peso<90) {
+        situacao = 8
+        } else if(idade>=20 && idade<50 && peso>60 && peso<90) {
+        situacao = 5
+        } else if(idade>50 && peso>60 && peso<90) {
+        situacao = 2
+        } else if (idade<20 && peso>=90) {
+        situacao = 7
+        } else if(idade>=20 && idade<50 && peso>=90) {
+        situacao = 4
+        } else if(idade>=50 && peso>=90) {
+        situacao = 1
+        }
+
+
+        document.getElementById("situacao").value= (situacao)
+
+
+        }
+
+    </script>
+</body>
+</html>

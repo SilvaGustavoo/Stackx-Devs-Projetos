@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Author" content="Gustavo Santos Silva - gustavosantossilva122001@gmail.com">
+    <meta name="Keywords" content="Login, Email, Senha,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar senha (IF)</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(https://conteudo.imguol.com.br/c/entretenimento/32/2018/01/18/maca-1516308281068_v2_4x3.jpg);
+            background-size: cover;
+        }
+
+        main {
+            
+            border: 1px black dashed;
+            background-color: rgba(255, 255, 255, 0.82);
+            padding: 50px;
+            height: fit-content;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 5px 5px 5em #fff;
+        }
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+        }
+
+        p {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        #resultado {
+            background-color: transparent;
+            width: fit-content;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <img src="https://www.hfbrasil.org.br/view/imagens/icones/apple-2.png" alt="" title=""><br><br>
+        <label for="quantidade">Numero de produtos</label><br>
+        <input type="text" name="quantidade" id="quantidade" placeholder="Digite o valor em unidades."><br>
+        <button onclick="calcular()">Calcular</button> <br><br>
+
+        <label for="resultado">Valor Final:</label>
+        <input type="text" name="resultado" id="resultado">
+
+    </main>
+
+
+
+    
+    <script>
+        function calcular() {
+            let preco
+            let quantidade = parseInt(document.getElementById("quantidade").value)
+            
+            if (quantidade < 12) {
+                preco = 0.3
+            } else {
+                preco = 0.25
+            }
+            let valorFinal = preco * quantidade
+
+            document.getElementById("resultado").value= "R$ " + valorFinal.toFixed(2) 
+        }
+
+    </script>
+</body>
+</html>

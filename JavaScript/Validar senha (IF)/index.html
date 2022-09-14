@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Author" content="Gustavo Santos Silva - gustavosantossilva122001@gmail.com">
+    <meta name="Keywords" content="Login, Email, Senha,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar senha (IF)</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg,black, red);
+        }
+
+        main {
+            border: 1px black dashed;
+            background-color: rgba(216, 216, 216, 0.8);
+            padding: 50px;
+            height: fit-content;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 5px 5px 5em #fff;
+        }
+        .img_user {
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: grey;
+        }
+
+        p {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
+        input {
+            text-align: center;
+            border-radius: 15px;
+            border: .1px black solid;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div class="img_user"></div>
+        <p>gustavosantossilva122001@gmail.com</p>
+        <label for="senha">Insira sua senha</label>
+        <br>
+        <input type="password" name="senha" id="senha">
+        <br>
+        <button onclick="validar()">Login</button>
+    </main>
+
+
+
+    
+    <script>
+        function validar() {
+            const senha = "1234"
+            let senhaInserida = document.getElementById("senha").value
+            if (senha !== senhaInserida) {
+                document.getElementById("senha").style="border-color: red;";
+                alert("Senha está Incorreta, Acesso Negado!!")
+            } else {
+                document.getElementById("senha").style="border-color: black;";
+                alert("Acesso permitido!!")
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

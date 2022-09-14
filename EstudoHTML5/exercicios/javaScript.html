@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body id="fundo">
+
+    <p id="paragrafo" ondblclick="myfunction()">Clique em mim duas vezes</p>
+
+    <p id="bg" onclick="cor()">clique aqui e vera mudando de cor irmano </p>
+
+
+    <p id="rgba" onclick="rgba()">Vamo ver se essaqui ader ao degrade tbm hehehe</p>
+
+
+    <!--Criando um formulario -->
+
+    <form>
+        <h1>Digite um valor numerico no espaço indicado e será feita a soma de ambos valores</h1>
+        <p>
+            <label for="num1">Numero 1:</label>
+            <input type="float" id="num1" name="Numero1" placeholder="Digite um numero" >
+        </p>
+        <p>
+            <label for="num2">Numero 2:</label>
+            <input type="float" id="num2" name="Numero2" placeholder="Digite outro numero">
+        </p>
+        <p>
+            <label for="resultado">Resultado:</label>
+            <input type="text" id="resultado" name="resultado" placeholder="Resultado">
+        </p>
+
+        <input type="button" value="Calcular" onclick="calculo()">
+    </form>
+
+    <script>
+
+    </script>
+
+    <br><br><br><br><br><br>
+
+    <form>
+        <p>
+            <label for="valor">Digite o valor do produto:</label>
+            <input type="float" id="valor" name="valor" placeholder="Digite o valor">
+        </p>
+
+        <p>
+            <label for="desconto">Desconto(%):</label>
+            <input type="float" id="desconto" name="desconto" placeholder="Digite o desconto">
+        </p>
+
+        <p>
+            <label for="desconto_produto">Desconto no produto:</label>
+            <input type="float" name="desconto_produto" id="desconto_produto">
+        </p>
+
+        <p>
+            <label for="valor_final">Valor final:</label>
+            <input type="float" name="valor_final" id="valor_final">
+        </p>
+
+        <input type="button" value="Calcular" onclick="calculo()"> 
+    </form>
+
+    <script>
+     
+        
+        function myfunction(){
+            document.getElementById("paragrafo").innerHTML="<br> BOM DIA MEUS AMIGOS";
+        }
+        
+        function cor() {
+            document.getElementById("bg").style.backgroundColor="blue";
+        }
+
+        function rgba() {
+            document.getElementById("rgba").style="background: rgb(234, 187, 187); font-size: 25px;" ;
+        }
+
+        function calculo() {
+            document.getElementById("resultado").value = parseFloat(document.getElementById("num1").value) + parseFloat(document.getElementById("num2").value);
+
+            document.getElementById("resultado").style="color: red; background: #AAA; font-weight: bold;";
+
+            document.getElementById("fundo").style="background: green; transition: 1.5s;";
+        }
+        
+        function calculo() {
+            document.getElementById("desconto_produto").value = parseFloat(document.getElementById("valor").value) * (parseFloat(document.getElementById("desconto").value)*0.01);
+
+            document.getElementById("valor_final").value = parseFloat(document.getElementById("valor").value) - parseFloat(document.getElementById("desconto_produto").value);
+
+            document.getElementById("desconto_produto").style="color: black;"            
+        }   
+    </script>
+</body>
+</html>
