@@ -1,6 +1,6 @@
 let potencia = 3
 
-potencia **= 3
+potencia **= 2
 console.log("O valor de 3 ao quadrado é: " + potencia);
 
 for (var i = 0; i <= 7; i++){

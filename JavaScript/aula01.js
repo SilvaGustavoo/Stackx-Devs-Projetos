@@ -70,6 +70,8 @@ acesso("admin", "admin", (msg) => { console.log(msg)})
 
 
 
+
+
 /**
  * @description a função receberia um cep e faria uma solicitação na rede para a entrega dos dados referente ao cep inserido
  * @returns {string} retornar o endereço de um cep inserido
@@ -80,4 +82,7 @@ async function endereco () {
 }
 
 endereco().then(e => {console.log(e)}).catch(err => console.log(err))
+
+
+
 
