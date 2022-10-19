@@ -1,0 +1,131 @@
+-- CREATE DATABASE DBaula3;
+-- USE DBaula3;
+-- CREATE TABLE PEDIDOS (
+-- ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+-- CLIENTE varchar (30) NOT NULL,
+-- FRETE int NOT NULL,
+-- VIA varchar (1) NOT NULL,
+-- DATAPEDIDO date NOT NULL
+-- ) ;
+-- insert into  PEDIDOS (CLIENTE, VIA, FRETE, DATAPEDIDO) values 
+-- ('Joaquim','M',200,'2020-10-05');
+-- insert into  PEDIDOS (CLIENTE, VIA, FRETE, DATAPEDIDO) values 
+-- ('Pedro','M',180,'2020-05-04');
+-- insert into  PEDIDOS (CLIENTE, VIA, FRETE, DATAPEDIDO) values 
+-- ('Pedro','T',90,'2020-02-06');
+-- insert into  PEDIDOS (CLIENTE, VIA, FRETE, DATAPEDIDO) values 
+-- ('Patricia','M',120,'2019-02-07');
+-- insert into  PEDIDOS (CLIENTE, VIA, FRETE, DATAPEDIDO) values 
+-- ('Cristiane','T',100,'2019-05-14');
+-- insert into  PEDIDOS (CLIENTE, VIA, FRETE, DATAPEDIDO) values 
+-- ('Cristiane','T',100,'2020-06-15');
+-- insert into  PEDIDOS (CLIENTE, VIA, FRETE, DATAPEDIDO) values 
+-- ('Cristiane','A',135,'2020-08-17');
+-- -- -------------------------------------------------------------
+-- CREATE TABLE CLIENTES (
+-- NUMERO INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+-- NOME varchar (30) NOT NULL,
+-- CIDADE varchar (30) NOT NULL,
+-- IDADE int NOT NULL,
+-- ENDERECO varchar (30) NOT NULL
+-- ) ;
+-- insert into  CLIENTES (NOME, CIDADE, IDADE, ENDERECO) values 
+-- ('Joaquim','São Paulo',20,'Rua Eli, 1000');
+-- insert into  CLIENTES (NOME, CIDADE, IDADE, ENDERECO) values ('Ana','São 
+-- Paulo',32,'Av Paulista, 1234');
+-- insert into  CLIENTES (NOME, CIDADE, IDADE, ENDERECO) values 
+-- ('Maria','Campinas',50,'Rua Taquari, 875');
+-- insert into  CLIENTES (NOME, CIDADE, IDADE, ENDERECO) values 
+-- ('Tatiana','Sorocaba',38,'Rua Cesario galeno, 448');
+-- insert into  CLIENTES (NOME, CIDADE, IDADE, ENDERECO) values 
+-- ('Bruno','Vinhedo',17,'Rua dos Donatários, 346');
+-- insert into  CLIENTES (NOME, CIDADE, IDADE, ENDERECO) values 
+-- ('Renata','Campinas',26,'Rua Bom Pastor, 452');
+-- -- -------------------------------------------------------------
+-- CREATE TABLE CIDADES (
+-- ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+-- CIDADE varchar (30) NOT NULL,
+-- PAIS varchar (30) NOT NULL
+-- ) ;
+-- insert into  CIDADES (CIDADE, PAIS) values ('Milã','Itália');
+-- insert into  CIDADES (CIDADE, PAIS) values ('Caracas','Venezuela');
+-- insert into  CIDADES (CIDADE, PAIS) values ('Barcelona','Espanha');
+-- insert into  CIDADES (CIDADE, PAIS) values ('Boston ','EUA');
+-- insert into  CIDADES (CIDADE, PAIS) values ('São Paulo','Brasil');
+-- insert into  CIDADES (CIDADE, PAIS) values ('São José dos 
+-- Campos','Brasil');
+-- insert into  CIDADES (CIDADE, PAIS) values ('Campinas','Brasil');
+-- -- -------------------------------------------------------------
+-- CREATE TABLE FUNCIONARIOS (
+-- ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+-- NOME varchar (30) NOT NULL,
+-- EMAIL varchar (30) NOT NULL,
+-- SALARIO numeric (20,2) NOT NULL,
+-- SEXO varchar (1) NOT NULL,
+-- SETOR varchar (3) NOT NULL,
+-- ESTCIVIL varchar (1) NOT NULL
+-- );
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Maria','teste0@gmail.com', 2800, 'F', 'MKT','C');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Patricia','teste1@gmail.com', 1500, 'F', 'VEN','C');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Armando','teste2@gmail.com', 3000, 'M', 'PRD','S');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Adriano','teste3@gmail.com', 4000, 'M', 'TI','S');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Cleiton','teste4@gmail.com', 5000, 'M', 'TI','C');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Carla','teste5@gmail.com', 1200, 'F', 'TI','C');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Denise','teste6@gmail.com', 4200, 'F', 'MKT','C');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Eloisa','teste7@gmail.com', 7000, 'F', 'MKT','S');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Fábio','teste8@gmail.com', 2000, 'M', 'RH','S');
+-- insert into  FUNCIONARIOS (NOME, EMAIL, SALARIO, SEXO, SETOR, ESTCIVIL) 
+-- values ('Igor','teste9@gmail.com', 2500, 'M', 'RH','C');
+-- -- -------------------------------------------------------------
+-- CREATE TABLE PRODUTOS (
+-- ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+-- DESCRICAO varchar (40) NOT NULL,
+-- QUANT int NOT NULL,
+-- PRECO_VENDA numeric (20,2) NOT NULL,
+-- CUSTO numeric (20,2) NOT NULL
+-- ) ;
+-- insert into  PRODUTOS (DESCRICAO, QUANT, PRECO_VENDA, CUSTO) values 
+-- ('CANETA', 1000, 10, 5 );
+-- insert into  PRODUTOS (DESCRICAO, QUANT, PRECO_VENDA, CUSTO) values 
+-- ('LÁPIS', 2000, 8, 4 );
+-- insert into  PRODUTOS (DESCRICAO, QUANT, PRECO_VENDA, CUSTO) values 
+-- ('BORRACHA', 800, 4, 2 );
+-- insert into  PRODUTOS (DESCRICAO, QUANT, PRECO_VENDA, CUSTO) values 
+-- ('APONTADOR', 150, 12, 7 );
+-- insert into  PRODUTOS (DESCRICAO, QUANT, PRECO_VENDA, CUSTO) values 
+-- ('RÉGUA', 600, 3, 1);
+-- -------------------------------------------------------------
+
+-- SELECT count(DISTINCT cidade) FROM clientes;
+-- SELECT cidade FROM clientes
+
+-- SELECT * FROM clientes;
+-- SELECT * FROM pedidos;
+-- SELECT count(DISTINCT cliente) as total FROM pedidos;
+-- SELECT count(nome) AS DeMaiorCampinas FROM clientes WHERE idade > 18 AND cidade LIKE 'camp%';
+-- SELECT count(DISTINCT pais) AS numPaisEstrangeiros FROM cidades WHERE pais NOT LIKE 'Br%';
+-- SELECT count(*) as total FROM funcionarios WHERE email IS NOT NULL;
+-- SELECT sum(salario) FROM funcionarios;
+-- SELECT sum(frete) as TotalFrete FROM pedidos WHERE via = 'M';
+-- SELECT sum(salario) as Total FROM funcionarios WHERE setor = 'TI' AND sexo = 'M';
+-- SELECT avg(salario) as Média FROM funcionarios WHERE sexo = 'F' AND (salario BETWEEN 1000 AND 2000) AND setor NOT IN ('PRD', 'MKT');
+-- SELECT avg(salario) as Média FROM funcionarios WHERE setor = 'MKT' AND NOT estcivil = 'C';
+-- SELECT descricao, min(custo) as MenorCusto FROM produtos;
+
+-- SELECT max(preco_venda) as MaiorValor FROM produtos;
+-- SELECT max(datapedido) as Recente FROM pedidos;
+-- SELECT min(datapedido) as Primeiro_Pedido FROM pedidos;
+-- SELECT id, cliente, frete, via ,date_format(datapedido, '%d/%m/%Y') as data_formatada FROM pedidos;
+-- SELECT id, cliente, frete, via , date_format(datapedido, '%m-%Y') AS datapedido FROM pedidos
+
+
+

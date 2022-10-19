@@ -66,3 +66,6 @@
 -- SELECT * FROM medicos WHERE (especialidade = 'Ortopedista' OR especialidade = 'Cardiologista') AND idade < 40;
 -- SELECT * FROM medicos WHERE especialidade IN ('Ortopedista', 'Cardiologista') AND idade < 40;
 
+
+
+
